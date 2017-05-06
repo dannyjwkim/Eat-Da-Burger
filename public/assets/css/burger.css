@@ -1,0 +1,8 @@
+.mainBanner{
+  background-image: url("../img/burger.png");
+  background-size: contain;
+}
+.mainBanner h1{
+  color: white;
+  background-color: rgba(0, 0, 0, .6);
+}
