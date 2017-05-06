@@ -12,7 +12,7 @@
 
     <div class="row main">
 
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-6 col-xs-12 text-left">
         <h1>Burgers</h1>
           {{#each burgers}}
             {{#unless this.devoured}}
@@ -31,7 +31,7 @@
           {{/each}}
       </div>
 
-      <div class="col-md-6 col-xs-12">
+      <div class="col-md-6 col-xs-12 text-left">
         <h1>Devoured Burgers</h1>
           {{#each burgers}}
             {{#if this.devoured}}
