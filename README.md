@@ -1,3 +1,3 @@
 # Eat-Da-Burger
 
-https://cryptic-basin-25120.herokuapp.com/burgers
+https://cryptic-basin-25120.herokuapp.com
