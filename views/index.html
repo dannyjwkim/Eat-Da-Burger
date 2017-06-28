@@ -1,0 +1,73 @@
+<header class="text-center">
+  <div class="jumbotron mainBanner">
+    <h1>Eat Da Burger!</h1>
+  </div>
+</header>
+
+<main>
+
+<div class="container text-center">
+  
+  <div class="burger-container">
+
+    <div class="row main">
+
+      <div class="col-md-6 col-xs-12 text-left">
+        <h1>Burgers</h1>
+          {{#each burgers}}
+            {{#unless this.devoured}}
+            <div class="row burgers">
+              <div class="col-xs-9 burger">
+                <h2>{{this.burger_name}}</h2>
+              </div>
+              <div class="col-xs-3">
+                <form action="burgers/update/devour/{{this.id}}?_method=PUT" method="POST">
+                  <button class="btn btn-success" type="submit" style="float:right">DEVOUR!</button>
+                </form>
+              </div>
+            </div>
+            <hr class="break">
+            {{/unless}}
+          {{/each}}
+      </div>
+
+      <div class="col-md-6 col-xs-12 text-left">
+        <h1>Devoured Burgers</h1>
+          {{#each burgers}}
+            {{#if this.devoured}}
+            <div class="row burgers">
+              <div class="col-xs-6 burger">
+                <h2>{{this.burger_name}}</h2>
+              </div>
+              <div class="col-xs-6">
+                <form action="burgers/delete/{{this.id}}?_method=DELETE" method="POST">
+                  <button class="btn btn-danger btn-sm" type="submit">DELETE!</button>
+                </form>
+              </div>
+            </div>
+            <hr class="break">
+            {{/if}}
+          {{/each}}
+      </div>
+
+    </div>
+
+    <div class="row bottom">
+      <h1>Add a Burger</h1>
+      <form class="form-inline" action="burgers/create" method="POST">
+        <div class="form-group">
+          <label for="ca"><h4>Burger Name:</h4></label>
+          <input type="text" id="ca" name="name" class="form-control" required>
+        </div>
+        <button class="btn btn-success" type="submit"><i class="fa fa-plus" aria-hidden="true"></i>Add Burger</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+</footer>
